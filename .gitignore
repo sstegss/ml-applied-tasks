@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# Model / dataset caches
+.cache/
+models/
+*.pt
+*.h5
+*.keras
+
+# Large media (keep only small examples in examples/)
+data/
+outputs/
+*.mp4
+*.avi
+*.wav
+*.mp3
+*.flac
+!**/examples/**
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

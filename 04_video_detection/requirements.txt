@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+opencv-python
+# зависимости yolov5 для torch.hub
+pandas
+matplotlib
+seaborn
+pyyaml
+requests
+scipy
+tqdm
+psutil
+gitpython
+ultralytics
