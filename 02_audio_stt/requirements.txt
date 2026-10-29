@@ -1,7 +1,7 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch
-transformers
-datasets
-jiwer
-soundfile
-librosa
+torch==2.14.1+cpu
+transformers==5.20.2
+datasets==5.1.0
+jiwer==4.0.0
+soundfile==0.14.0
+librosa==1.0.0
