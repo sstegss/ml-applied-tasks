@@ -2,10 +2,10 @@
 
 Большая часть Imagenette (и train, и val) взята из обучающей выборки ImageNet,
 на которой учились модели. Поэтому по умолчанию оцениваем только на 500 файлах
-ILSVRC2012_val_* — это вся валидационная часть ImageNet для 10 классов Imagenette.
+ILSVRC2012_val_*: это вся валидационная часть ImageNet для 10 классов Imagenette.
 
 Метрики: top-1 и top-5 accuracy по всем 1000 классам ImageNet,
-скорость — картинок в секунду батчами и время на одну картинку.
+скорость: картинок в секунду батчами и время на одну картинку.
 """
 
 import argparse
@@ -40,8 +40,8 @@ def wnid_to_index() -> dict[str, int]:
 
 
 def load_samples(data_dir: Path, subset: str, per_class: int | None) -> list[tuple[Path, str]]:
-    """unseen — картинки из validation ImageNet (train/ и val/ Imagenette),
-    seen — картинки из train ImageNet в val/ Imagenette, модель видела их при обучении."""
+    """unseen: картинки из validation ImageNet (лежат в train/ и val/ Imagenette).
+    seen: картинки из train ImageNet в val/ Imagenette, модель видела их при обучении."""
     samples = []
     for class_dir in sorted((data_dir / "val").iterdir()):
         wnid = class_dir.name
@@ -94,7 +94,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--models", nargs="+", default=list(MODELS), choices=MODELS)
     parser.add_argument("--subset", choices=["unseen", "seen"], default="unseen",
-                        help="unseen — validation ImageNet (500 шт.), seen — train ImageNet из val/ Imagenette")
+                        help="unseen: validation ImageNet (500 шт.), seen: train ImageNet из val/ Imagenette")
     parser.add_argument("--per-class", type=int, default=None, help="картинок на класс (по умолчанию все)")
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--data", type=Path, default=DATA_DIR)
