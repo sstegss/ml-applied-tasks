@@ -12,4 +12,5 @@ scipy==1.18.1
 tqdm==4.70.1
 psutil==7.2.2
 gitpython==3.2.1
-ultralytics==8.4.183
+ultralytics==8.4.208
+ultralytics-thop==2.2.5
