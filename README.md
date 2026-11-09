@@ -22,4 +22,4 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Подробности — в README каждой задачи.
+Подробности в README каждой задачи.
